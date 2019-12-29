@@ -68,6 +68,35 @@ def main():
                 code, bookTitle = win.inputbox('Enter Book Title', height=None, width=None)
                 results = searchByTitle(bookTitle)
                 win.msgbox(results, height=None, width=60)
+            if tag == 'Search by Author':
+                code, bookAuthor = win.inputbox('Enter Book Author', height=None, width=None)
+                results = searchByAuthor(bookAuthor)
+                win.msgbox(results, height=None, width=60)
+            # is there another book to search?
+            code = win.yesno('Search another book?', height=None, width=None)
+            if code == win.CANCEL:
+                break
+        #delete a book
+        while tag == 'Delete Book':
+            code, tag = win.menu('             Delete a Book from Library',
+                                choices = [('Delete by Title', 'Enter book title')])
+
+            #if code is cancelled from Delete win
+            if code == win.CANCEL:
+                break
+            if tag == 'Delete by Title':
+                code, bookTitle = win.inputbox('Enter book title', height=None, width=None)
+                confirm = searchByTitle(bookTitle)
+                code = win.yesno('Are you sure you want to delete:' + '\n' + confirm, height=None, width=60)
+                if code == win.OK:
+                    deleteBook(confirm)
+                    win.msgbox('DELETED!' + '\n' + confirm, height=None, width=None)
+                else:
+                    win.msgbox('Book retained...', height=None, width=None)
+            code = win.yesno('Delete another book?', height=None, width=None)
+            if code == win.CANCEL:
+                break
+
 
 if __name__ == '__main__':
     main()
