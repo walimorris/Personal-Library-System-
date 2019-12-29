@@ -61,7 +61,6 @@ def inputBookInfo2(publishDate, isb):
     isb = isb
     return publishDate, isb
 
-
 def saveBook(libraryDictionary):
    
     """ This function is void and only acts to open the library file and append new
@@ -72,7 +71,6 @@ def saveBook(libraryDictionary):
     f.write(str(libraryDictionary) + '\n')
     f.close()
     print('Book Saved!')
-
 
 def buildBook(book):
     """ Here, building the book means to take the attributes from the created book
@@ -86,7 +84,6 @@ def buildBook(book):
     isb = book.bookIsb()
     return f'Title:{title}, Author:{auth}, Publisher:{pub}, Publish date:{pubDate}, ISB#:{isb}'
 
-
 def addData(book, bookInfo):
     """ Adding the formatted bookbuild to the actual library dictionary and updating
     all new book entries.
@@ -98,7 +95,6 @@ def addData(book, bookInfo):
     saveBook(libraryDictionary)
 
 #Add search functions
-
 def searchById(bookId):
     """ This option gives the ability for Library to search for books by the randomly generated
     Id numbers when the book is stored in the library. The library is search by matching the
