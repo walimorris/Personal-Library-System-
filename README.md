@@ -3,7 +3,7 @@ A Library Management System for your Personal Collection
 
 By: Wali Morris 
 
-**NOTE:** Today 12/29/2019 was second commit. There is still much to add.
+**NOTE:** **Today 12/29/2019 was second commit. There is still much to add.**
 
 The Personal, or Home Library System, is a command line based tool to track of all your book 
 collection needs. Home libraries come in many sizes, but if you fancy reading and keeping
