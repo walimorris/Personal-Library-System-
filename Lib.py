@@ -126,4 +126,33 @@ def searchByTitle(bookTitle):
     return 'Results Not Found'
     f.close()
 
+def searchByAuthor(bookAuthor):
+    """
+
+    """
+    book = {}
+    f = open("Library.txt", "r")
+    line = f.readline()
+    while line != '':
+        if bookAuthor in line:
+            return line[1:-2]
+            break
+        line = f.readline()
+    return 'Results Not Found'
+    f.close()
+
+# deletion of books
+def deleteBook(bookTitle):
+    """
+
+    """
+    r = open("Library.txt", "r")
+    line = r.readlines()
+    w = open("Library.txt", "w")
+    for line in lines:
+        if line.rstrip('\n') != bookTitle:
+            w.write(line)
+    r.close()
+    w.close()
+
 			
