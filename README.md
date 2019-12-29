@@ -18,6 +18,7 @@ is quite easy to use. Currently, there are three different home menu options to 
 Adding a new book to the collection, searching your collection of books by its identification
 number, title or author and deleting a book out right.
 
+![Home Menu!](Lib_home_menu.png)
 
 
 
