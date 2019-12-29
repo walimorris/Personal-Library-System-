@@ -44,9 +44,7 @@ class Book(object):
         return f'Title:{self.__title}, Author:{self.__author}, Publisher:{self.__publisher}, \
                 Publish date:{self.__publishDate}, ISB#:{self.__isb}'
 
-
 def inputBookInfo1(title, author, publisher):
-
     """ This function allows the library owner to input information for one book.
     Returned will be all information relevant for sending to book object.
 
@@ -62,7 +60,6 @@ def inputBookInfo2(publishDate, isb):
     return publishDate, isb
 
 def saveBook(libraryDictionary):
-
     """ This function is void and only acts to open the library file and append new
     books to the current library.
 
@@ -82,7 +79,6 @@ def buildBook(book):
     pubDate = book.bookPublishDate()
     isb = book.bookIsb()
     return f'Title:{title}, Author:{auth}, Publisher:{pub}, Publish date:{pubDate}, ISB#:{isb}'
-
 
 def addData(book, bookInfo):
     """ Adding the formatted bookbuild to the actual library dictionary and updating
