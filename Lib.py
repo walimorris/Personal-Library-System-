@@ -3,7 +3,6 @@
 import random
 
 class Book(object):
-
     """ This class creates a book object that has in it the typical characteristics
     of a book. These attributes are hidden, but this is a fairly simple class with 
     a few short and simple methods to receive all the information a library owner
