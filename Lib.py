@@ -1,9 +1,9 @@
 #!/usr/bin/env python 
 
-import random 
-        
+import random
+
 class Book(object):
-    
+
     """ This class creates a book object that has in it the typical characteristics
     of a book. These attributes are hidden, but this is a fairly simple class with 
     a few short and simple methods to receive all the information a library owner
@@ -21,32 +21,32 @@ class Book(object):
         self.__publishDate = publishDate
         self.__isb = isb
 
-    def bookTitle(self): 
+    def bookTitle(self):
         return self.__title
-    
-    def bookAuthor(self): 
-        return self.__author 
 
-    def bookPublisher(self): 
+    def bookAuthor(self):
+        return self.__author
+
+    def bookPublisher(self):
         return self.__publisher
 
-    def bookPublishDate(self): 
+    def bookPublishDate(self):
         return self.__publishDate
 
-    def bookIsb(self): 
+    def bookIsb(self):
         return self.__isb
     
     def createBookId(self):
-        bookIdNumber = 'HL' + str(random.randrange(0,10000))
-        return bookIdNumber 
+        bookIdNumber = 'HL' + str(random.randrange(1000,10000))
+        return bookIdNumber
 
-    def __str__(self): 
+    def __str__(self):
         return f'Title:{self.__title}, Author:{self.__author}, Publisher:{self.__publisher}, \
                 Publish date:{self.__publishDate}, ISB#:{self.__isb}'
 
 
 def inputBookInfo1(title, author, publisher):
-   
+
     """ This function allows the library owner to input information for one book.
     Returned will be all information relevant for sending to book object.
 
@@ -54,15 +54,15 @@ def inputBookInfo1(title, author, publisher):
     title = title
     author = author
     publisher = publisher
-    return title, author, publisher 
+    return title, author, publisher
 
-def inputBookInfo2(publishDate, isb): 
+def inputBookInfo2(publishDate, isb):
     publishDate = publishDate
     isb = isb
     return publishDate, isb
 
 def saveBook(libraryDictionary):
-   
+
     """ This function is void and only acts to open the library file and append new
     books to the current library.
 
@@ -70,7 +70,6 @@ def saveBook(libraryDictionary):
     f = open("Library.txt", "a")
     f.write(str(libraryDictionary) + '\n')
     f.close()
-    print('Book Saved!')
 
 def buildBook(book):
     """ Here, building the book means to take the attributes from the created book
@@ -83,6 +82,7 @@ def buildBook(book):
     pubDate = book.bookPublishDate()
     isb = book.bookIsb()
     return f'Title:{title}, Author:{auth}, Publisher:{pub}, Publish date:{pubDate}, ISB#:{isb}'
+
 
 def addData(book, bookInfo):
     """ Adding the formatted bookbuild to the actual library dictionary and updating
@@ -102,13 +102,33 @@ def searchById(bookId):
 
     """
     book = {}
-    f = open("Library.txt", "r") 
+    f = open("Library.txt", "r")
     line = f.readline()
     while line != '':
         if line[2:8] == str(bookId):
-            return line
+            return line[1:-2]
             break
         line = f.readline()
     return 'Results Not Found'
     f.close()
+
+def searchByTitle(bookTitle):
+    """ This option gives the ability for Library to search for books by Title and this function 
+    is simply passed a string containing the book title. If the title is matched to any book in 
+    the Library, the results will be reported. For best results, the full title should be submitted.
+    If multiple books contain the same word, then the results will report multiple books. This is okay
+    for searching, as the menu allows for scroll and each book has a personal Id number.
+    
+    """
+    book = {}
+    f = open("Library.txt", "r")
+    line = f.readline()
+    while line != '':
+        if bookTitle in line:
+            return line[1:-2]
+            break
+        line = f.readline()
+    return 'Results Not Found'
+    f.close()
+
 			
