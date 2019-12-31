@@ -127,18 +127,31 @@ def searchByTitle(bookTitle):
     f.close()
 
 def searchByAuthor(bookAuthor):
-    """
+    """ Searching by Author is used when needing to know all books currently in
+    collection from one specific author. By creating an empty dictionary, list 
+    and string we can open the library and search specific names which will return 
+    every line in our dictionary with that name. Be careful, searching for John can 
+    return books by John Zelle, John Jacobs and John Adams. That's the nature of a 
+    search. Those results will be appended to our searched Books list and then added
+    to the results string that can be viewed from dialog. 
 
     """
     book = {}
+    searchBooks = []
+    searchResults = ''
     f = open("Library.txt", "r")
     line = f.readline()
     while line != '':
         if bookAuthor in line:
-            return line[1:-2]
-            break
+            searchBooks.append(line)
         line = f.readline()
-    return 'Results Not Found'
+    if searchBooks == []:
+        return '{:*^55}'.format('Results Not Found')
+    for i in range(len(searchBooks)):
+        # Line below is a format line, searchBooks[i] is a long string so indexing 
+        # here is allowed and let's us strip the dictionary '{}' braces. 
+        searchResults += searchBooks[i][1:-2] + '\n'
+    return searchResults
     f.close()
 
 # deletion of books
