@@ -40,6 +40,11 @@ search for our made up author John McGee resulted in:
 
 ![Author results!](return_author.png)
 
+Searching by Id is the most proficient. Here's an example: 
+
+![search id!](search_id.png)
+![return id!](id_results.png)
+
 
 
 
