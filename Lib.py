@@ -146,8 +146,12 @@ def deleteBook(bookTitle):
     """
 
     """
+    # There was a big, deleting all entries within the library: the bug was pretty simple. 
+    # Rather than originally having lines = r.readlines(); it was line = r.readlines(). So, 
+    # when this function was called, there was an error "lines was not defined". That was 
+    # identified. Now, the new file isn't deleting the book entry. << *FIX* 
     r = open("Library.txt", "r")
-    line = r.readlines()
+    lines = r.readlines()
     w = open("Library.txt", "w")
     for line in lines:
         if line.rstrip('\n') != bookTitle:
