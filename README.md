@@ -31,6 +31,15 @@ can go from there.
 
 ![Search by Author!](search_author.png)
 
+Here John McGee was searched, which is still somewhat exact, and all books in the Library by Mr. McGee were
+returned. Be careful because searching for John, if you can't really remember the author's full name, will 
+return all books by John. Whoever John may be. Though, this can result in a long list of books by John, its 
+also great when you can't remember the author but have a small piece of information to search for. So, this 
+can also be a good thing. You can't quite remember which John wrote "The Space Adventure". Here's what the 
+search for our made up author John McGee resulted in: 
+
+![Author results!](return_author.png)
+
 
 
 
