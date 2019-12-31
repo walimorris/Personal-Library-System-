@@ -19,6 +19,12 @@ books by its identification number, title or author and deleting a book out righ
 
 ![Home Menu!](Lib_home_menu.png)
 
+Searching is made easy. For instance, if I were to select the search option, there are multiple ways 
+to search for a book. You can search by identification number, which is my preferred method and will 
+respond with a individual book, if it exists in the library. Here's an example: 
+
+![Search Options!](search_options.png)
+
 
 
 
