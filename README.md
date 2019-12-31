@@ -25,6 +25,12 @@ respond with a individual book, if it exists in the library. Here's an example:
 
 ![Search Options!](search_options.png)
 
+Searching by author is great when you need to know all books by a specific author, don't quite remember
+the book title or id #? That's okay, searching by author will return all books by that author and you 
+can go from there. 
+
+![Search by Author!](search_author.png)
+
 
 
 
