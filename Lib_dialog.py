@@ -25,11 +25,11 @@ def main():
                                      ('Search Book', 'Enter book information'),
                                      ('tag 3------', 'Item text-------------')])
         if code == win.CANCEL:
-            win.msgbox("The software is free to use for anyone willing to build their "
+            win.msgbox("This software is free to use for anyone willing to build their "
                        "very own home library. This product was built with Python3, dialog, "
                        "and Ubuntu 18.04. The Home Library can be changed or modified and is "
-                       "completely open source, given proper annoucement of its original author "
-                       "and purpose.The goal with The Home Library is solely for individual safe "
+                       "completely open source, given proper annoucement of its original "
+                       "purpose.The goal with The Home Library is solely for individual safe "
                        "keeping. We understand the importance of knowledge and passing it on, "
                        "books are a significant form of knowledge and this knowledge should be "
                        "stored and easily retrievable. The Home Library is an on-going personal "
@@ -111,7 +111,6 @@ def main():
             code = win.yesno('Delete another book?', height=None, width=None)
             if code == win.CANCEL:
                 break
-
 
 if __name__ == '__main__':
     main()
