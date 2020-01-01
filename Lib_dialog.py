@@ -25,7 +25,22 @@ def main():
                                      ('Search Book', 'Enter book information'),
                                      ('tag 3------', 'Item text-------------')])
         if code == win.CANCEL:
-            win.msgbox('Thank you for using The Home Library!')
+            win.msgbox("The software is free to use for anyone willing to build their "
+                       "very own home library. This product was built with Python3, dialog, "
+                       "and Ubuntu 18.04. The Home Library can be changed or modified and is "
+                       "completely open source, given proper annoucement of its original author "
+                       "and purpose.The goal with The Home Library is solely for individual safe "
+                       "keeping. We understand the importance of knowledge and passing it on, "
+                       "books are a significant form of knowledge and this knowledge should be "
+                       "stored and easily retrievable. The Home Library is an on-going personal "
+                       "project by Wali Morris, who hopes to make a small impact on the world, "
+                       "especially to those less fortunate, by making Knowledge easily accessible "
+                       "to families. The open source community and spirit keeps this idea alive, "
+                       "which helped this author learn a very small portion of technology. It is "
+                       "in hopes, even as an individual, that The Home Library can be useful to you "
+                       "and your families, to collect, retrieve, and pass on knowledge to future "
+                       "generations. Thank you to the open source community and to you for passing "
+                       "on this sweet sweet knowledge!", height=30, width=60)
             sys.exit(0)
         #submit new book
         while tag == 'Submit Book':
