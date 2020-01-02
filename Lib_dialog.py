@@ -31,13 +31,12 @@ def main():
         event based programming, creating a series of windows dependent on user interaction. 
 
         """
-
         if code == win.CANCEL:
             win.msgbox("  ****Thank You for using the Home Library System****\n"
                        "\nThis software is free to use for anyone willing to build their "
                        "very own home library. This product was built with Python3, dialog, "
                        "and Ubuntu 18.04. The Home Library can be changed or modified and is "
-                       "completely open source. The goal with The Home Library is solely for "
+                       "completely open source. The Home Library is solely for "
                        "individual safe keeping. We understand the importance of knowledge and "
                        "passing it on, books are a significant form of knowledge and this knowledge "
                        "should be stored and easily retrievable. The Home Library is an on-going personal "
@@ -112,8 +111,9 @@ def main():
 
         #delete a book
         while tag == 'Delete Book':
-            """ Deleting a book from the library collections is a pretty serious action. Once a book is 
-            deleted, you can't not undue this. A book can be resubmitted into the library, but it's 
+            
+            """ Deleting a book from the library collection is a pretty serious action. Once a book is 
+            deleted, you can not undue this. A book can be resubmitted into the library, but it's 
             gone forever until then. Confirmation boxes are initiated well before any permanent action 
             is taken. Deleting books are also done by submitting its personal ID number, this way there's 
             no confusion to which book should be deleted. 
