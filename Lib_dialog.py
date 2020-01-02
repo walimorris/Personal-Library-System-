@@ -15,7 +15,7 @@ def main():
         """ In a dialog menu setting, there may be mutilple "action" options. For instance, 
         in a yesno window object, if a user selects yes this is equivalent to win.OK or 'ok' 
         which allows for carry on actions to a new window or series of action windows after. 
-        Selecting Cancel is equivalent to win.CANCEl which cancels an action all together. 
+        Selecting Cancel is equivalent to win.CANCEL which cancels an action all together. 
         This is used to build a dialog setting, creating a series of dialog boxes to complete
         a single program. 
     
