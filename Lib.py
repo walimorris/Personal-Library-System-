@@ -43,6 +43,7 @@ class Book(object):
         return f'Title:{self.__title}, Author:{self.__author}, Publisher:{self.__publisher}, \
                 Publish date:{self.__publishDate}, ISB#:{self.__isb}'
 
+
 def inputBookInfo1(title, author, publisher):
     """ This function allows the library owner to input information for one book.
     Returned will be all information relevant for sending to book object.
@@ -57,6 +58,7 @@ def inputBookInfo2(publishDate, isb):
     publishDate = publishDate
     isb = isb
     return publishDate, isb
+
 
 def saveBook(libraryDictionary):
     """ This function is void and only acts to open the library file and append new
@@ -79,6 +81,7 @@ def buildBook(book):
     isb = book.bookIsb()
     return f'Title:{title}, Author:{auth}, Publisher:{pub}, Publish date:{pubDate}, ISB#:{isb}'
 
+
 def addData(book, bookInfo):
     """ Adding the formatted bookbuild to the actual library dictionary and updating
     all new book entries.
@@ -91,9 +94,10 @@ def addData(book, bookInfo):
 
 #Add search functions
 def searchById(bookId):
-    """ This option gives the ability for Library to search for books by the randomly generated
-    Id numbers when the book is stored in the library. The library is search by matching the
-    given book's indexed number(key). If the key is found, then the book will be returned.
+    """ This option allows for the most proficient identification search for each book in 
+    the library. This search matches a books identification number by taking the exact 
+    index from a given book entry in the library. If the key is found then the book will 
+    be returned.
 
     """
     book = {}
@@ -107,12 +111,27 @@ def searchById(bookId):
     return 'Results Not Found'
     f.close()
 
+def delSearchById(bookId):
+    """ This function is essentially the same as the searchById() function, except this option 
+    only searches for an individual book's identification number and matches it to the book 
+    that's searched for deletion. 
+
+    """
+    f = open("Library.txt", "r")
+    line = f.readline()
+    while line != '':
+        if bookId in line:
+            return line
+            break
+        line = f.readline()
+    return 'Results Not Found'
+    f.close()
+	
 def searchByTitle(bookTitle):
-    """ This option gives the ability for Library to search for books by Title and this function 
-    is simply passed a string containing the book title. If the title is matched to any book in 
-    the Library, the results will be reported. For best results, the full title should be submitted.
-    If multiple books contain the same word, then the results will report multiple books. This is okay
-    for searching, as the menu allows for scroll and each book has a personal Id number.
+    """ Searching by title can be specific, but is mainly used to inquire a list of books that 
+    may possibly be the book that's being searched. If for some reason, the full book title is 
+    not known, a user can search what they know and receive a list of possible books they are 
+    searching for. 
     
     """
     book = {}
@@ -129,8 +148,8 @@ def searchByTitle(bookTitle):
 def searchByAuthor(bookAuthor):
     """ Searching by Author is used when needing to know all books currently in
     collection from one specific author. By creating an empty dictionary, list 
-    and string we can open the library and search specific names which will return 
-    every line in our dictionary with that name. Be careful, searching for John can 
+    and string we can open the library and search specific words which will return 
+    every line in our dictionary with that word. Be careful, searching for John can 
     return books by John Zelle, John Jacobs and John Adams. That's the nature of a 
     search. Those results will be appended to our searched Books list and then added
     to the results string that can be viewed from dialog. 
@@ -155,21 +174,23 @@ def searchByAuthor(bookAuthor):
     f.close()
 
 # deletion of books
-def deleteBook(bookTitle):
-    """
+def deleteBook(bookId):
+    """ Deletion of books are triggered by recognition of each books personal identification 
+    number. Recognizing a books four digit identification number is best due to this number 
+    being one of a kind, there is no other number in the library like it. It seems to be 
+    more proficient to open/read/close the library before opening the library again to update
+    and delete the book of choice. 
 
     """
-    # There was a big, deleting all entries within the library: the bug was pretty simple. 
-    # Rather than originally having lines = r.readlines(); it was line = r.readlines(). So, 
-    # when this function was called, there was an error "lines was not defined". That was 
-    # identified. Now, the new file isn't deleting the book entry. << *FIX* 
-    r = open("Library.txt", "r")
-    lines = r.readlines()
-    w = open("Library.txt", "w")
+    d = open("Library.txt", "r")
+    lines = d.readlines()
+    d.close()
+    f = open("Library.txt", "w")
     for line in lines:
-        if line.rstrip('\n') != bookTitle:
-            w.write(line)
-    r.close()
-    w.close()
+        if not bookId in line:
+            f.write(line)
+    f.close()
+
+
 
 			
