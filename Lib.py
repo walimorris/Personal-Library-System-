@@ -55,6 +55,10 @@ def inputBookInfo1(title, author, publisher):
     return title, author, publisher
 
 def inputBookInfo2(publishDate, isb):
+    """ Continuation of the information needed to create a book, broken up over two 
+    two functions. 
+    
+    """
     publishDate = publishDate
     isb = isb
     return publishDate, isb
