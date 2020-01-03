@@ -118,7 +118,7 @@ def searchById(bookId):
 def delSearchById(bookId):
     """ This function is essentially the same as the searchById() function, except this option 
     only searches for an individual book's identification number and matches it to the book 
-    that's searched for deletion. 
+    that's searched for deletion, without the more efficient indexing.
 
     """
     f = open("Library.txt", "r")
