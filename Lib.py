@@ -35,8 +35,8 @@ class Book(object):
     def bookIsb(self):
         return self.__isb
     
-    def createBookId(self):
-        bookIdNumber = 'HL' + str(random.randrange(1000,10000))
+    def createBookId(self, bookAuthor):
+        bookIdNumber = bookAuthor[0:2].upper() + str(random.randrange(1000,10000))
         return bookIdNumber
 
     def __str__(self):
@@ -88,11 +88,14 @@ def buildBook(book):
 
 def addData(book, bookInfo):
     """ Adding the formatted bookbuild to the actual library dictionary and updating
-    all new book entries.
+    all new book entries. Originally books were created with HL + between 4-5 randomly
+    generated numbers. For the sake of simplicity and to navigate away from duplication, 
+    book identification numbers now begin with the author's first two letters in first 
+    name + 4-5 randomly generated numbers. 
 
     """
     libraryDictionary = {}
-    bookId = book.createBookId()
+    bookId = book.createBookId(book.book.Author())
     libraryDictionary.update({bookId:bookInfo})
     saveBook(libraryDictionary)
 
