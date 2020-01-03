@@ -45,6 +45,10 @@ Searching by Id is the most proficient. Here's an example:
 ![search id!](search_id.png)
 ![return id!](id_results.png)
 
+This is as far as we'll go with examples. There are a few features and more will be added periodically. 
+
+**HOW To Run:**
+
 
 
 
