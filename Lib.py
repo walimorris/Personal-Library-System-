@@ -194,7 +194,3 @@ def deleteBook(bookId):
         if not bookId in line:
             f.write(line)
     f.close()
-
-
-
-			
