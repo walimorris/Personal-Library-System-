@@ -95,7 +95,7 @@ def addData(book, bookInfo):
 
     """
     libraryDictionary = {}
-    bookId = book.createBookId(book.book.Author())
+    bookId = book.createBookId(book.bookAuthor())
     libraryDictionary.update({bookId:bookInfo})
     saveBook(libraryDictionary)
 
