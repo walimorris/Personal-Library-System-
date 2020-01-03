@@ -15,7 +15,7 @@ def main():
         """ In a dialog menu setting, there may be mutilple "action" options. For instance, 
         in a yesno window object, if a user selects yes this is equivalent to win.OK or 'ok' 
         which allows for carry on actions to a new window or series of action windows after. 
-        Selecting Cancel is equivalent to win.CANCEL which cancels an action all together. 
+        Selecting Cancel is equivalent to win.CANCEl which cancels an action all together. 
         This is used to build a dialog setting, creating a series of dialog boxes to complete
         a single program. 
     
@@ -36,7 +36,7 @@ def main():
                        "\nThis software is free to use for anyone willing to build their "
                        "very own home library. This product was built with Python3, dialog, "
                        "and Ubuntu 18.04. The Home Library can be changed or modified and is "
-                       "completely open source. The Home Library is solely for "
+                       "completely open source. The goal with The Home Library is solely for "
                        "individual safe keeping. We understand the importance of knowledge and "
                        "passing it on, books are a significant form of knowledge and this knowledge "
                        "should be stored and easily retrievable. The Home Library is an on-going personal "
@@ -111,9 +111,9 @@ def main():
 
         #delete a book
         while tag == 'Delete Book':
-            
-            """ Deleting a book from the library collection is a pretty serious action. Once a book is 
-            deleted, you can not undue this. A book can be resubmitted into the library, but it's 
+
+            """ Deleting a book from the library collections is a pretty serious action. Once a book is 
+            deleted, you can't not undue this. A book can be resubmitted into the library, but it's 
             gone forever until then. Confirmation boxes are initiated well before any permanent action 
             is taken. Deleting books are also done by submitting its personal ID number, this way there's 
             no confusion to which book should be deleted. 
@@ -122,21 +122,18 @@ def main():
             code, tag = win.menu('             Delete a Book from Library',
                                 choices = [('Delete by ID', 'Enter book ID#')])
 
-            #if code is cancelled from Delete Menu
-            if code == win.CANCEL:
-                break
             if tag == 'Delete by ID':
                 code, bookId = win.inputbox('Enter book ID#', height=None, width=None)
-                if code == win.CANCEL:
-                    break
-                confirm = searchById(bookId)
+            if code == win.CANCEL:
+                break
+            confirm = delSearchById(bookId)
             if confirm == 'Results Not Found':
                 win.msgbox(confirm, height=None, width=None)
             else:
                 code = win.yesno('Are you sure you want to delete:' + '\n' + confirm, height=None, width=60)
                 if code == win.OK:
                     deleteBook(confirm)
-                    win.msgbox('DELETED!' + '\n' + confirm, height=None, width=None)
+                    win.msgbox('DELETED!' + '\n' + confirm, height=None, width=60)
                 else:
                     win.msgbox("Book Retained!", height=None, width=None)
 
@@ -145,7 +142,7 @@ def main():
                 break
             else:
                 tag = 'Delete Book'
-
+               
 if __name__ == '__main__':
     main()
 
