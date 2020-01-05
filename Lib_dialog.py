@@ -24,7 +24,8 @@ def main():
                             title='The Home Library',
                             choices=[('Submit Book', 'Add to Library'),
                                      ('Search Book', 'Enter book information'),
-                                     ('Delete Book', 'Delete book from Library')])
+                                     ('Delete Book', 'Delete book from Library'), 
+                                     ('View Library', 'View whole collection')])
 
         """ It should be noted that the variable 'code' above references the dialog action to 
         for the menu window within the program, which shows that this feature allows for 
