@@ -143,20 +143,21 @@ def main():
             else:
                 tag = 'Delete Book'
                 
-        while tag == 'View Library':
+       while tag == 'View Library':
 
             """ The View Library Tag will have a few features. The main feature allowing a collection 
-            owner to view every book within the library and all information along with it. By Selecting
-            a book, a brief summary of the book will be printed for viewing. 
+            owner to view every book within the library. This dialog win is created with a scroll effect
+            which allows the user to scroll left and right or up and down to view all content.
 
             """
+
             code, tag = win.menu('             View Library',
                                 choices = [('Library', 'View contents')])
 
             if tag == 'Library':
-                win.msgbox(viewLibrary(), height=None, width=60)
+                win.scrollbox(viewLibrary(), height=None, width=120)
             if code == win.CANCEL:
                 break
-               
+
 if __name__ == '__main__':
     main()
