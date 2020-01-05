@@ -9,9 +9,7 @@ if [ $setup = 'Y' ] || [ $setup = 'y' ]; then
     sudo apt-get install python3-dialog
     ln -s Lib_dialog.py library
     printf "The Home Library is setup on this system. From this point you can run 'python3 library' from this directory to run this program.\n"
-fi
-
-if [ $setup != 'Y' ] || [ $setup != 'y' ]; then
+else
     exit(0)
-fi     
+fi
 
