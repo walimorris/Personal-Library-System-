@@ -63,9 +63,15 @@ The Home Library System is a one time setup. After the first initial install, di
 link is created within the directory that your Home Library lives. Anytime after the initial setup you should just run 
 'python3 library' from this directory to start up The Home Library program. It's recommended that The Home Library lives within the home directory and your system is updated often. Here's what you should do from your home directory: 
 
+***First: clone this repository(it's recommended to do this in the home directory)***
+`git clone https://github.com/walimorris/Personal-Library-System-.git`
+
+***Next: Now, we need to make the startup script executable and run it*** 
 ```
-git clone https://github.com/walimorris/Personal-Library-System-.git
 chmod +x startup.sh 
 ./startup.sh
-python3 library
 ```
+***Lastly: Everything is setup, now just run the command below anytime you want to use The Home Library***
+
+`python3 library`
+
