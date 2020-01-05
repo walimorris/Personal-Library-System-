@@ -197,3 +197,10 @@ def deleteBook(bookId):
         if not bookId in line:
             f.write(line)
     f.close()
+
+# view library 
+def viewLibrary():
+    f = open("Library.txt", "r")
+    lines = f.readlines()
+    return lines
+    f.close()
