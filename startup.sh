@@ -10,6 +10,6 @@ if [ $setup = 'Y' ] || [ $setup = 'y' ]; then
     ln -s Lib_dialog.py library
     printf "The Home Library is setup on this system. From this point you can run 'python3 library' from this directory to run this program.\n"
 else
-    exit(0)
+    exit 0 
 fi
 
