@@ -200,7 +200,15 @@ def deleteBook(bookId):
 
 # view library 
 def viewLibrary():
+    """ This function simply reads every book in the library and creates a variable to build and 
+    print the contents of the library.
+    
+    """
     f = open("Library.txt", "r")
-    lines = f.readlines()
-    return lines
+    line = f.readline()
+    library = ''
+    while line != '':
+        library += line + ('\n')
+        line = f.readline()
     f.close()
+    return library
