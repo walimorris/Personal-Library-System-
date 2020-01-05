@@ -64,6 +64,7 @@ link is created within the directory that your Home Library lives. Anytime after
 'python3 library' from this directory to start up The Home Library program. It's recommended that The Home Library lives within the home directory and your system is updated often. Here's what you should do from your home directory: 
 
 ***First: clone this repository(it's recommended to do this in the home directory)***
+
 `git clone https://github.com/walimorris/Personal-Library-System-.git`
 
 ***Next: Now, we need to make the startup script executable and run it*** 
