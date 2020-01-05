@@ -20,7 +20,7 @@ there are four different home menu options to choose from: adding a new book to 
 your collection of books by its identification number, title or author, deleting a book out right and viewing
 all the books in your personal collection.
 
-![Home Menu!](Lib_home_menu.png)
+![Updated: Home Menu!](Lib_home_menu.png)
 
 Searching is made easy. For instance, if I were to select the search option, there are multiple ways 
 to search for a book. You can search by identification number, which is my preferred method and will 
