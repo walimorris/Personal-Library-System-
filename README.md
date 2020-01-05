@@ -59,11 +59,13 @@ grow your book collection!
 
 **HOW To Run:** 
 
-The Home Library System is a one time setup deal. After the first initial install, dialog is installed and a symbolic 
-link is created within the directory that your Home Library lives, so anytime after that you should just run ./Library 
-from this directory to run the program. It's recommended that The Home Library lives within the home directory and 
-your system is updated often. Here's what you should do from your home directory: 
+The Home Library System is a one time setup. After the first initial install, dialog is installed and a symbolic 
+link is created within the directory that your Home Library lives. Anytime after the initial setup you should just run 
+'python3 library' from this directory to start up The Home Library program. It's recommended that The Home Library lives within the home directory and your system is updated often. Here's what you should do from your home directory: 
 
 ```
-
-
+git clone https://github.com/walimorris/Personal-Library-System-.git
+chmod +x startup.sh 
+./startup.sh
+python3 library
+```
