@@ -69,7 +69,7 @@ link is created within the directory that your Home Library lives. Anytime after
 
 ***Secondly: change into the directory holding The Library System program***
 
-`cd Personal-Library-System-`
+`cd Personal-Library-System-/`
 
 ***Next: Now, we need to make the startup script executable and run it*** 
 ```
