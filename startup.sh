@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 printf "Welcome to the Home Library system!\n"
 printf "[WARNING!] Selecting 'Y' will update your system, install dialog and set-up this program. Continue? Y/n "
