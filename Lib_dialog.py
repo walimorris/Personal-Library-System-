@@ -150,7 +150,6 @@ def main():
             which allows the user to scroll left and right or up and down to view all content.
 
             """
-
             code, tag = win.menu('             View Library',
                                 choices = [('Library', 'View contents')])
 
