@@ -7,8 +7,9 @@ read -r setup
 
 if [ $setup = 'Y' ] || [ $setup = 'y' ]; then
     sudo apt-get install python3-dialog
-    ln -s Lib_dialog.py library
-    printf "The Home Library is setup on this system. From this point you can run 'python3 library' from this directory to run this program.\n"
+    fdir=$(pwd)/Lib_dialog.py
+    cd --; ln -s $fdir library
+    printf "The Home Library is setup on this system. From this point forward, you can run 'python3 library' from your Home directory to run this program.\n"
 else
     exit 0 
 fi
