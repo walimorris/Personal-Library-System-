@@ -12,7 +12,7 @@
 # more info by viewing this project's README file. 
 ##################################################################################################################
 
-printf "Welcome to the Home Library system!\n"
+printf "Welcome to the Home Library System!\n"
 printf "[WARNING!] Selecting 'Y' will update your system, install dialog and set-up this program. Continue? Y/n "
 
 read -r setup
@@ -23,6 +23,7 @@ if [ $setup = 'Y' ] || [ $setup = 'y' ]; then
     cd --; ln -s $fdir library
     printf "The Home Library is setup on this system. From this point forward, you can run 'python3 library' from your Home directory to run this program.\n"
 else
+    printf "[Warning!] Sorry, setup was not completed. If you would like to run this program without setup, please view the README file.\n" 
     exit 0 
 fi
 
