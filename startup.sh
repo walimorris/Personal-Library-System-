@@ -1,13 +1,17 @@
 #!/bin/bash
-###############################################################################################################
+#################################################################################################################
 # Author : Wali Morris 
 # Date   : 01/06/2020
 # File   : startup.sh
 # Notes  :
 # This script is for first time users of The Personal Library System, it installs both the Library Management 
-# system and dialog. Lastly, this script creates a symblic link from your home directory to dialog.py which 
-# allows users to run The Personal Library System directly from their Home directory by running python3 library.
-################################################################################################################
+# system and dialog. Lastly, this script creates a symbolic link from your home directory to dialog.py which 
+# allows users to run The Personal Library System directly from their Home directory by running 'python3 library'.
+# This script is used to automate this short process and allow user's to easily use The Library Management Sys
+# quickly. If you would like to manually set-up yourself, you'll only need to clone the repository. You can find
+# more info by viewing this project's README file. 
+##################################################################################################################
+
 printf "Welcome to the Home Library system!\n"
 printf "[WARNING!] Selecting 'Y' will update your system, install dialog and set-up this program. Continue? Y/n "
 
