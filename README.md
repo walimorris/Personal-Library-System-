@@ -76,7 +76,8 @@ link is created within the directory that your Home Library lives. Anytime after
 `chmod +x startup.sh && ./startup.sh`
 
 ***Lastly: Everything is setup, now just run the command below anytime you want to use The Home Library***
-***Note: The script makes it possible to run this directly from the home directory***
+
+***Note: This script makes it possible to run this directly from the home directory***
 
 `python3 library`
 
