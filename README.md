@@ -72,12 +72,11 @@ link is created within the directory that your Home Library lives. Anytime after
 `cd Personal-Library-System-/`
 
 ***Next: Now, we need to make the startup script executable and run it*** 
-```
-chmod +x startup.sh 
-./startup.sh
-```
+
+`chmod +x startup.sh && ./startup.sh`
+
 ***Lastly: Everything is setup, now just run the command below anytime you want to use The Home Library***
-***Note: The script made it possible to run this directly from the home directory***
+***Note: The script makes it possible to run this directly from the home directory***
 
 `python3 library`
 
