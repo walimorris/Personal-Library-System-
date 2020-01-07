@@ -54,8 +54,8 @@ should be the most proficient way to search for a book and will most likely give
 ![return id!](id_results.png)
 
 This is as far as we'll go with examples. There are more features to explore, and ofcourse more features that'll be 
-added as this project grows. For now, you're equipped to navigate this your personal library management system and 
-grow your book collection!
+added as this project grows. For now, you're equipped to navigate your personal library management system and grow 
+your book collection!
 
 **HOW To Run:** 
 
