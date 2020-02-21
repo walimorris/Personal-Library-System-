@@ -1,5 +1,9 @@
 # Personal-Library-System-
 ## UNDER CONSTRUCTION
+### The Library Management System is being upgraded! 
+### New implementation, security, and more!
+### We'll be back soon.
+
 A Library Management System for your Personal Collection 
 
 By: Wali Morris 
