@@ -25,19 +25,19 @@ there are four different home menu options to choose from: adding a new book to 
 your collection of books by its identification number, title or author, deleting a book out right and viewing
 all the books in your personal collection.
 
-![Home Menu!](Lib_home_menu.png)
+![Home Menu!](Images/Lib_home_menu.png)
 
 Searching is made easy. For instance, if someone were to select the search option, there are multiple ways 
 to look up a book. You can search by identification number, which is the preferred method and will respond 
 with an individual book, if it exists in the library. Here's an example: 
 
-![Search Options!](search_options.png)
+![Search Options!](Images/search_options.png)
 
 Searching by author is great when you need to know all books by a specific author, if you don't quite remember
 the book title or identification number, that's okay. Searching by author will return all books by that author 
 and you can go from there. 
 
-![Search by Author!](search_author.png)
+![Search by Author!](Images/search_author.png)
 
 Here John McGee was searched, which is still somewhat exact, and all books in the Library by Mr. McGee were
 returned. Be careful, searching for only "John", if you can't really remember the author's full name, will 
@@ -46,17 +46,17 @@ in a long list of books by John, its also great when you can't remember the auth
 of information to search for. So, this can also be a good thing. Here's what the search for our made up author
 John McGee resulted in: 
 
-![Author results!](return_author.png)
+![Author results!](Images/return_author.png)
 
 Searching by Id is the most proficient. Here's an example: 
 
-![search id!](search_id.png)
+![search id!](Images/search_id.png)
 
 Searching by a books' personal identification number will return one book, the book that's linked to that specific 
 number that's generated when the book is created by whomever has access to the library management system. This 
 should be the most proficient way to search for a book and will most likely give the exact results you want. 
 
-![return id!](id_results.png)
+![return id!](Images/id_results.png)
 
 This is as far as we'll go with examples. There are more features to explore, and ofcourse more features that'll be 
 added as this project grows. For now, you're equipped to navigate your personal library management system and grow 
