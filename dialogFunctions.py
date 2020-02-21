@@ -33,6 +33,9 @@ def buildDialog():
     ('LOGIN', 'LOGIN CREDENTIALS')])
     return code, tag, win 
 
+
+
+
 def buildSetupMessage(win): 
     """
     Set up procedures for the first time users begin with creating dialog objects
@@ -43,20 +46,57 @@ def buildSetupMessage(win):
     setupMessage = setup.sendSetupMessage()
     win.msgbox(setupMessage, height = 60, width = 90)
 
-def getUserFirstNameLastName(win): 
+
+def getUserFirstNameLastName(win):
+    """
+    win must be passed to create inputbox windows. Returned is the user's first 
+    and last name. This function is used to build the user's userName for system.
+    """
     code, firstName = win.inputbox('Enter First Name: ', height = None, width = None)
     code, lastName = win.inputbox('Enter Last Name: ', height = None, width = None)
     return firstName, lastName
 
-def buildUserName(firstName, lastName): 
+
+def buildUserName(firstName, lastName):
+    """
+    To Build a username, this function must receive the user's first and last name
+    See class implementation in User.py. 
+    """
     newUser = User(firstName, lastName)
-    newUser.createUserName()
-    newUser.assembleUserFullName()
+    newUserLogin = newUser.createUserName()
+    newUserFullname = newUser.assembleUserFullName()
     return newUser
 
+
 def showLoginCredentials(win, newUser):
+    # This function utilizes User class methods to show the user's new credentials 
     win.msgbox('      Welcome ' + newUser.getUserFullName() + '!\n'
                '\n      User Name : ' + newUser.getUserName(), height = None, width = 40)
+
+def buildPassword(win, newUser): 
+    code, password = win.inputbox('Enter Password: ', height = None, width = None)
+    finalPassword = newUser.createPassword(newUser, password)
+    return finalPassword
+
+# attempting to verify password in dialog is bugged. I think its from not passing the username
+# currently right now I'm passing newuser
+def verifyNewPassword(win, newUser, finalPassword): 
+    code, tryPassword = win.inputbox('Verify Password: ', height = None, width = None)
+    passwordAttempt = newUser.verifyPassword(newUser, tryPassword)
+    if(passwordAttempt == 'Correct password'):
+            return win.msgbox('Successful Set-up!')
+
+    attempts = 2
+    while(passwordAttempt != 'Correct password' and attempts <= 3):
+        code, tryPassword = win.inputbox(f'Verify Password (attempt{attempts}):', height = None, width = 45)
+        passwordAttempt = newUser.verifyPassword(newUser, tryPassword)
+        attempts += 1
+        if(passwordAttempt == 'Correct password'): 
+            return win.msgbox('Successful Set-up!')
+    return win.msgbox('Please try again in 1 minute')
+
+
+
 
 
 

@@ -30,6 +30,9 @@ def main():
             showLoginCredentials(win, newUser)
 
             # It's time to create a password and authenticate it
+            password = buildPassword(win, newUser)
+            msg = verifyNewPassword(win, newUser, password)
+            print(msg) 
 
 
 
