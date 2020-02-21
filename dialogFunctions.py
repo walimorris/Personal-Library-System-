@@ -33,9 +33,6 @@ def buildDialog():
     ('LOGIN', 'LOGIN CREDENTIALS')])
     return code, tag, win 
 
-
-
-
 def buildSetupMessage(win): 
     """
     Set up procedures for the first time users begin with creating dialog objects
@@ -46,7 +43,6 @@ def buildSetupMessage(win):
     setupMessage = setup.sendSetupMessage()
     win.msgbox(setupMessage, height = 60, width = 90)
 
-
 def getUserFirstNameLastName(win):
     """
     win must be passed to create inputbox windows. Returned is the user's first 
@@ -55,7 +51,6 @@ def getUserFirstNameLastName(win):
     code, firstName = win.inputbox('Enter First Name: ', height = None, width = None)
     code, lastName = win.inputbox('Enter Last Name: ', height = None, width = None)
     return firstName, lastName
-
 
 def buildUserName(firstName, lastName):
     """
@@ -67,7 +62,6 @@ def buildUserName(firstName, lastName):
     newUserFullname = newUser.assembleUserFullName()
     return newUser
 
-
 def showLoginCredentials(win, newUser):
     # This function utilizes User class methods to show the user's new credentials 
     win.msgbox('      Welcome ' + newUser.getUserFullName() + '!\n'
@@ -78,8 +72,6 @@ def buildPassword(win, newUser):
     finalPassword = newUser.createPassword(newUser, password)
     return finalPassword
 
-# attempting to verify password in dialog is bugged. I think its from not passing the username
-# currently right now I'm passing newuser
 def verifyNewPassword(win, newUser, finalPassword): 
     code, tryPassword = win.inputbox('Verify Password: ', height = None, width = None)
     passwordAttempt = newUser.verifyPassword(newUser, tryPassword)
