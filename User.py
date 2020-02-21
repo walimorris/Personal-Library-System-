@@ -57,10 +57,7 @@ class User(object):
         self.password = password
         self.salt = os.urandom(32) # A new salt for this user
         self.key = hashlib.pbkdf2_hmac('sha256', self.password.encode('utf-8'), self.salt, 100000)
-        self.users[self.userName] = { # Store the user's salt and key
-                'salt': self.salt, 
-                'key': self.key
-                }
+        self.users[self.userName] = {'salt': self.salt, 'key': self.key}
 
     def verifyPassword(self, userName, verifiedPassword): 
         """
