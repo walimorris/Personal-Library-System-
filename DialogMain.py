@@ -1,51 +1,43 @@
-from Lib import *
+from Lib import * 
 from messages import *
 from User import *
+from dialogFunctions import * 
 import locale
 from dialog import Dialog
+import sqlite3
 import sys
 
 
 
-def main():
+def main(): 
 
-    while True:
+    while True: 
         # Begins application and setup procedures
-        locale.setlocale(locale.LC_ALL, '')
-        win = Dialog(dialog='dialog')
-        win.set_background_title('The Home Library')
+        tag, win = buildDialog()
 
-        code, tag = win.menu('LIBRARY SET-UP SCREEN',
-                              title = 'SET-UP',
-                              choices = [('SET-UP', 'SET-UP LIBRARY'),
-                                         ('LOGIN', 'LOGIN CREDENTIALS')])
-
-        if tag == 'SET-UP':
+        if tag == 'SET-UP': 
             """
             Set up procedures for first time users begin with creating dialog objects. 
             Creating setup message objects. Creating User and credentials. 
             """
-            setup = Message()
-            setupMessage = setup.sendSetupMessage()
-            win.msgbox(setupMessage, height = 60, width = 90)
-            code, firstName = win.inputbox('Enter First Name', height = None, width = None)
-            code, lastName = win.inputbox('Enter Last Name', height = None, width = None)
+            buildSetupMessage(win)
+            firstName, lastName = getUserFirstNameLastName(win)
             
-             # With the information above, create the user and assemble their name
-            newUser = User(firstName, lastName)
-            newUser.createUser()
-            newUser.assembleUserFullName()
+            # With the information above, create the user and assemble their name
+            newUser = buildUserName(firstName, lastName)
 
-            # new user has been created. It's time to generate a password 
-            newUserName = newUser.getUserName()
-            win.msgbox('    Welcome ' + newUser.getUserFullName() + '!')
+            # new user has been created. Show login credentials 
+            showLoginCredentials(win, newUser)
+
+            # It's time to create a password and authenticate it
 
 
-        if code == win.CANCEL:
+
+
+
+        if code == win.CANCEL: 
             sys.exit(0)
 
 
-if __name__ == '__main__':
+if __name__ == '__main__': 
     main()
-
-
