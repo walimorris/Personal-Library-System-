@@ -1,3 +1,9 @@
+"""
+The Book Class is currently being replanned and reworked. It shouldn't take much 
+to build a book, but currently going through all possible avenues of approach for
+books. 
+"""
+
 class Book(object):
 
     def __init__(self, title, author, publisher, publishDate, isb):
