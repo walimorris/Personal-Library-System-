@@ -86,8 +86,10 @@ class User(object):
 
     """
     Creating a lockout or lockdown method for an account that has had to many login attempts  
-    seems to be a good feature for this class. 
+    seems to be a good feature for this class. Password changes will also come in 
+    handy 
     """
+
 
 
 
