@@ -33,9 +33,6 @@ def buildDialog():
     ('LOGIN', 'LOGIN CREDENTIALS')])
     return code, tag, win 
 
-
-
-
 def buildSetupMessage(win): 
     """
     Set up procedures for the first time users begin with creating dialog objects
@@ -46,19 +43,16 @@ def buildSetupMessage(win):
     setupMessage = setup.sendSetupMessage()
     win.msgbox(setupMessage, height = 60, width = 90)
 
-
 def getUserFirstNameLastName(win): 
     code, firstName = win.inputbox('Enter First Name: ', height = None, width = None)
     code, lastName = win.inputbox('Enter Last Name: ', height = None, width = None)
     return firstName, lastName
-
 
 def buildUserName(firstName, lastName): 
     newUser = User(firstName, lastName)
     newUser.createUserName()
     newUser.assembleUserFullName()
     return newUser
-
 
 def showLoginCredentials(win, newUser):
     win.msgbox('      Welcome ' + newUser.getUserFullName() + '!\n'
