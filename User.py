@@ -16,7 +16,21 @@ class User(object):
         Passwords and accounts will be created there after
         """
         self.__firstName = firstName
-        self.__lastName = lastName 
+        self.__lastName = lastName
+
+    def assembleUserFullName(self):
+        """
+        This mutator method assembles a string of the user's fullname which will 
+        be useful in many situations addressing the user. 
+        """
+        self.fullName = self.__firstName.capitalize() + " " + self.__lastName.capitalize()
+
+    def getUserFullName(self): 
+        """ 
+        A accessor method to return the user's fullname
+        """
+        return f'{self.fullName}'
+         
 
     def createUser(self): 
         """
@@ -70,10 +84,6 @@ class User(object):
         else: 
             incorrect = 'Incorrect password' 
             return f'{incorrect}' # if passwords don't match inform the user 
-
-    # test method, delete once satisfied 
-    def getPassword(self):
-        return f'{self.password}'
 
 
 
