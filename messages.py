@@ -1,7 +1,8 @@
 """
-The message functions are solely for the purpose of author communication. 
+The Message Class is solely for the purpose of author communication. 
 All messages are written to help user's understand the purpose and ideas 
-behind the Personal Library Management System. 
+behind the Personal Library Management System. Messages may also have a 
+few methods to help user/author communication.
 """
 
 class Message: 
