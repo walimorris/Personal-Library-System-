@@ -13,7 +13,7 @@ def main():
 
     while True: 
         # Begins application and setup procedures
-        tag, win = buildDialog()
+        code, tag, win = buildDialog()
 
         if tag == 'SET-UP': 
             """

@@ -28,11 +28,10 @@ def buildDialog():
     locale.setlocale(locale.LC_ALL, '')
     win = Dialog(dialog='dialog')
     win.set_background_title('The Home Library')
-    code, tag = win.menu('LIBRARY SET-UP SCREEN', 
-                            title = 'SET-UP', 
-                            choices = [('SET-UP', 'SET-UP LIBRARY'), 
-                                       ('LOGIN', 'LOGIN CREDENTIALS')])
-    return tag, win 
+    code, tag = win.menu('LIBRARY SET-UP SCREEN', title = 'SET-UP', 
+    choices = [('SET-UP', 'SET-UP LIBRARY'), 
+    ('LOGIN', 'LOGIN CREDENTIALS')])
+    return code, tag, win 
 
 
 
