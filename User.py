@@ -31,7 +31,6 @@ class User(object):
         """
         return f'{self.fullName}'
          
-
     def createUser(self): 
         """
         Creating a username is fast and easy. Generally a user name is first five
