@@ -32,7 +32,7 @@ class User(object):
         return f'{self.fullName}'
          
 
-    def createUser(self): 
+    def createUserName(self): 
         """
         Creating a username is fast and easy. The  user name will be first five
         letters of user's lastname plus users first initial
@@ -81,6 +81,8 @@ class User(object):
         else: 
             incorrect = 'Incorrect password' 
             return f'{incorrect}' # if passwords don't match inform the user 
+
+
 
     """
     Creating a lockout or lockdown method for an account that has had to many login attempts  
